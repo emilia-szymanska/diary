@@ -1,14 +1,14 @@
 class EntriesController < ApplicationController
+  before_action :find_entry, only: [:show, :edit, :update, :destroy]
+
   def index
   	@entries = Entry.all
   end
 
   def new
-
   end	
 
   def show
-  	@entry = Entry.find(params[:id])
   end
 
   def create
@@ -17,22 +17,20 @@ class EntriesController < ApplicationController
   end
 
   def edit
-  	@entry = Entry.find(params[:id])
   end	
 
   def update
-   	entry = Entry.find(params[:id])
-   	entry.update(entry_params)
+
+   	@entry.update(entry_params)
    	#entry.title = entry_params[:title]
    	#entry.content = entry_params[:content]
    	#entry.save
-   	redirect_to entry_path(entry)
+   	redirect_to entry_path(@entry)
 
   end	
 
   def destroy
-  	entry = Entry.find(params[:id])
-  	entry.destroy
+  	@entry.destroy
   	redirect_to entries_path
   end	
 
@@ -40,6 +38,10 @@ class EntriesController < ApplicationController
 
   def entry_params
   	params.require(:entry).permit(:title, :content)
+  end	
+
+  def find_entry
+  	@entry = Entry.find(params[:id])
   end	
 
 
