@@ -12,7 +12,7 @@
 
   <body>
 
-  <% if current_user %>
+  <% if current_user%>
     <button><h2><%= link_to("Sign out", destroy_user_session_path, method: :delete) %> </h2> </button>
   <%else%>
     <button><h2><%= link_to("Sign in", new_user_session_path) %> </h2></button>

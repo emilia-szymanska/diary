@@ -1,4 +1,4 @@
- <% if current_user %>
+ <% if current_user && current_user.id == 1 %>
     <button> <%= link_to 'New entry', new_entry_path %> </button>
   <%end%>
 <button> <%= link_to 'HOME', root_path %> </button>
