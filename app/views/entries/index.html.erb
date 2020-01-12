@@ -1,4 +1,6 @@
-<button> <%= link_to 'New entry', new_entry_path %> </button>
+ <% if current_user %>
+    <button> <%= link_to 'New entry', new_entry_path %> </button>
+  <%end%>
 <button> <%= link_to 'HOME', root_path %> </button>
 
 <div>

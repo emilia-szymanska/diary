@@ -7,6 +7,8 @@
  <p> <%= @entry.content %> </p>    
 
 </div>
+ <% if current_user %>
+    <button> <%= link_to "Edit", edit_entry_path(@entry) %> </button>
+ 	<button> <%= link_to "Delete", entry_path(@entry), method: :delete, data: { confirm: " Czy na pewno?" } %> </button>
+  <%end%>
 
- <button> <%= link_to "Edit", edit_entry_path(@entry) %> </button>
- <button> <%= link_to "Delete", entry_path(@entry), method: :delete, data: { confirm: " Czy na pewno?" } %> </button>
