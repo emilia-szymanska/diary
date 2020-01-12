@@ -1,0 +1,15 @@
+<%= form_for(Entry.new, url: entries_path) do |form| %>
+
+  <p class="losos"><%= form.label("title") %></p>
+
+  <p><%= form.text_field("title") %></p>
+
+  <p class="losos"><%= form.label("content") %></p>
+
+  <p><%= form.text_area("content") %></p>
+
+  <p><%= form.submit 'Create' %></p>
+
+<% end %>
+
+<button> <p><%= link_to("Back to all entries", entries_path) %></p> </button>

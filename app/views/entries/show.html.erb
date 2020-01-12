@@ -1,0 +1,12 @@
+<button> <%= link_to 'HOME', root_path %> </button>
+
+<div>
+
+ <h2> <%= @entry.title %> </h2>    
+ <p> <%= time_ago_in_words(@entry.created_at) + " ago" %> </p>    
+ <p> <%= @entry.content %> </p>    
+
+</div>
+
+ <button> <%= link_to "Edit", edit_entry_path(@entry) %> </button>
+ <button> <%= link_to "Delete", entry_path(@entry), method: :delete, data: { confirm: " Czy na pewno?" } %> </button>
