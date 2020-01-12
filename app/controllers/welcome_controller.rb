@@ -11,6 +11,6 @@ class WelcomeController < ApplicationController
 
         ]
 
-        @entries = Entry.last(3)
+        @entries = Entry.all.order(created_at: :desc).first(3)
 	end
 end
