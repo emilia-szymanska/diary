@@ -1,24 +1,8 @@
-# README
+# diary
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description
 
-Things you may want to cover:
+This [web application](https://emilia-diary.herokuapp.com/) was implemented during Rails Girls workshop. This app allows the owner to create diary entries. 
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Author
+* **Emilia Szymańska**
